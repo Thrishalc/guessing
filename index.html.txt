@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🎯 Number Guessing Game</h1>
+            <p>Guess the secret number between 1 and 100!</p>
+        </header>
+
+        <div class="score-board">
+            <div class="score-box">
+                <h3>Attempts</h3>
+                <p id="attempts">0</p>
+            </div>
+
+            <div class="score-box">
+                <h3>Score</h3>
+                <p id="score">0</p>
+            </div>
+
+            <div class="score-box">
+                <h3>Best Score</h3>
+                <p id="bestScore">0</p>
+            </div>
+        </div>
+
+        <div class="game-box">
+
+            <div class="question-mark">?</div>
+
+            <h2>I'm thinking of a number!</h2>
+            <p class="instruction">
+                Can you guess the correct number?
+            </p>
+
+            <input
+                type="number"
+                id="guessInput"
+                placeholder="Enter your guess"
+                min="1"
+                max="100"
+            >
+
+            <button id="guessBtn" onclick="checkGuess()">
+                Submit Guess
+            </button>
+
+            <div id="feedback" class="feedback">
+                🤔 Enter your first guess!
+            </div>
+
+            <p id="remaining">You have 10 attempts.</p>
+
+            <button class="restart-btn" onclick="restartGame()">
+                🔄 New Game
+            </button>
+
+        </div>
+
+        <div class="history-box">
+            <h3>Guess History</h3>
+            <div id="history">
+                No guesses yet.
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ using HTML, CSS and JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
